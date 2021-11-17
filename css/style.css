@@ -49,6 +49,10 @@ body {
   color: rgba(17, 17, 17, 0.7);
 }
 
+.section {
+  padding: 3rem 9%;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -82,6 +86,138 @@ body {
 .logo i {
   color: #29d9d5;
   padding-right: 0.5rem;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  margin: 0 auto;
+  margin-top: 9rem;
+  width: 90%;
+  min-height: 90vh;
+  border-radius: 1rem;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(/images/home-bg.jpg) no-repeat;
+  background-size: center;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+.home .content {
+  text-align: center;
+}
+.home .content span {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: transparent;
+  -webkit-text-stroke: 0.1rem #fff;
+  display: block;
+}
+.home .content h3 {
+  font-size: 6vw;
+  color: #fff;
+}
+.home .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: #aaa;
+}
+
+.book-form {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: -5rem;
+  background: #222;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+  padding: 3rem 2rem;
+}
+.book-form form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.book-form form .inputBox {
+  flex: 1 1 25rem;
+}
+.book-form form .inputBox span {
+  font-size: 1.4rem;
+  color: #aaa;
+}
+.book-form form .inputBox input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #29d9d5;
+  font-size: 1.6rem;
+  color: #aaa;
+  text-transform: none;
+  background: none;
+  margin-top: 1rem;
+}
+.book-form form .btn {
+  flex: 1 1 25rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #222;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+
+  .home {
+    margin-top: 10rem;
+  }
+
+  .content span {
+    font-size: 8vh;
+  }
+  .content h3 {
+    font-size: 9vh;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
